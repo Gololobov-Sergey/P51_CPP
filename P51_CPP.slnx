@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="P51_CPP/P51_CPP.vcxproj" Id="dcde60bc-a79d-47fe-afba-c85791452291" />
+  <Project Path="Test/Test.vcxproj" Id="d1e27362-75b9-4d16-8136-9d00960a89c3" />
 </Solution>

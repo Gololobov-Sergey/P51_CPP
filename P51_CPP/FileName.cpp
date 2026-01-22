@@ -8,6 +8,129 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+
+
+	// 22.01.2026
+
+	// !
+	// > < >= <= == !=
+	// || or +, && and *
+
+	/*int a = 5;
+	int b = 4;
+
+	int c = !a > b && (a == 4 || b <= 5);
+
+	if (a == 5)
+	{
+		cout << "True" << endl;
+	}
+	else
+	{
+		cout << "False" << endl;
+	}*/
+
+
+	/*int a, b, c;
+	cin >> a >> b >> c;
+	if (a > b && a > c)
+	{
+		cout << "Max: " << a << endl;
+	}
+	else
+	{
+		if (b > c)
+		{
+			cout << "Max: " << b << endl;
+		}
+		else
+		{
+			cout << "Max: " << c << endl;
+		}
+	}*/
+
+
+
+	// 3+2
+	/*int a, b;
+	char op;
+	cin >> a >> op >> b;
+	switch (op)
+	{
+	case '+': cout << a + b << endl; break;
+	case '-': cout << a - b << endl; break;
+	case '*': cout << a * b << endl;
+		break;
+	case '/':
+		if (b != 0)
+		{
+			cout << a / b << endl;
+		}
+		else
+		{
+			cout << "Error: Division by zero!" << endl;
+		}
+		break;
+	default:
+		cout << "Error: Unknown operator!" << endl;
+		break;
+	}*/
+
+
+	/*int m;
+	cin >> m;
+
+	switch (m)
+	{
+	case 12: case 1:  case 2:  cout << "winter"; break;
+	case 3:  case 4:  case 5:  cout << "Spring"; break;
+	case 6:  case 7:  case 8:  cout << "Summer"; break;
+	case 9:  case 10: case 11: cout << "Fall";   break;
+	default: cout << "Error"; break;
+	}*/
+
+
+	// (condition) ? expr1 : expr2; 
+
+	/*int a, b, c;
+	cin >> a >> b >> c;
+	int max;
+	if (a > b)	
+	{
+		max = a;
+	}
+	else
+	{
+		max = b;
+	}
+
+	(a > b) ? max = a : max = b;
+
+	max = (a > b) ? a : b;
+	max = (a > b && a > c) ? a : (b > c) ? b : c;*/
+
+
+	/*Користувач вводить чотиризначне число.Необхідно поміняти в цьому числі 1 і 2 цифри, 
+	а також 3 і 4 цифри.Якщо користувач вводить не чотиризначне число, вивести повідомлення про помилку.*/
+
+	// 1234  ->  2143
+	int n;
+	cin >> n;
+	if (n >= 1000 && n <= 9999)
+	{
+		int d1 = n / 1000;        // 1 цифра
+		int d2 = n / 100 % 10;    // 2 цифра
+		int d3 = n / 10 % 10;     // 3 цифра
+		int d4 = n % 10;          // 4 цифра
+		int new_n = d2 * 1000 + d1 * 100 + d4 * 10 + d3;
+		cout << new_n << endl;
+	}
+	else
+	{
+		cout << "Error: Not a four-digit number!" << endl;
+	}
+
+
 	// 20.01.2026
 
 

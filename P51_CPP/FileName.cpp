@@ -8,6 +8,161 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+	// 27.01.2026
+
+	//int a = 1;
+	//while (a <= 5)
+	//{
+	//	cout << a << " ";
+	//	a++;
+	//}
+
+	//do
+	//{
+	//	//
+
+	//} while (true);
+
+
+	/*for (int i = 1; i <= 5; i++)
+	{
+		cout << i << " ";
+	}*/
+
+	/*for (int i = 1; i <= 15; i += 2)
+	{
+		cout << i << " ";
+	}*/
+
+	/*for (size_t k = 10; k > 0; k--)
+	{
+		cout << k << " ";
+	}*/
+
+
+	/*int a, b, c;
+
+	cout << "Input number: " << endl;
+
+	int sum = 0;
+
+	do{
+		cin >> a;
+		sum += a;
+	} while (a != 0);
+
+	cout << sum << endl;*/
+
+	//cout << time(0) << endl;
+
+
+	/*srand(time(0));
+	for (size_t i = 0; i < 20; i++)
+	{
+		cout << rand() % 500 + 1 << endl;
+	}*/
+	
+	/*int rnd = rand() % 5000 + 1;
+	int n, count = 0;
+	do
+	{
+		cin >> n;
+		count++;
+		if (n < rnd)
+		{
+			cout << "Bigger!" << endl;
+		}
+		else if (n > rnd)
+		{
+			cout << "Smaller!" << endl;
+		}
+		else
+		{
+			cout << "You win! Attempts: " << count << endl;
+			break;
+		}
+
+	} while (true);*/
+
+
+
+	/*int clients = 0;
+	int totalSum = 0;
+
+	do
+	{
+		clients++;
+		cout << "Processing client #" << clients << endl;
+
+		int minCount = 4;
+		int count = minCount;
+		int sum = 0;
+
+		for (size_t i = 0; i < minCount; i++)
+		{
+			int price;
+			cout << "Input price: ";
+			cin >> price;
+			sum += price;
+		}
+
+		do
+		{
+			char ch;
+			cout << "Do you want to buy more items? (y/n): ";
+			cin >> ch;
+			if (ch == 'y' || ch == 'Y')
+			{
+				int price;
+				cout << "Input price: ";
+				cin >> price;
+				sum += price;
+				count++;
+			}
+			else if (ch == 'n' || ch == 'N')
+			{
+				break;
+			}
+			else
+			{
+				cout << "Invalid input. Please enter 'y' or 'n'." << endl;
+			}
+
+		} while (true);
+
+		cout << "Client #" << clients << endl;
+		cout << "Total items: " << count << endl;
+		cout << "Total sum: " << sum << endl;
+
+		totalSum += sum;
+
+		char ch;
+		cout << "Do you want to buy more clients? (y/n): ";
+		cin >> ch;
+		if (ch == 'y' || ch == 'Y')
+		{
+			continue;
+		}
+		else if (ch == 'n' || ch == 'N')
+		{
+			break;
+		}
+
+	} while (true);
+
+	cout << "Total clients: " << clients << endl;
+	cout << "Total sum of all clients: " << totalSum << endl;*/
+
+
+
+	int a;
+	do
+	{
+		cin >> a;
+	} while (a < 1 || a > 10);
+	cout << a << endl;
+	
+
 
 
 	// 22.01.2026
@@ -95,7 +250,7 @@ int main()
 	/*int a, b, c;
 	cin >> a >> b >> c;
 	int max;
-	if (a > b)	
+	if (a > b)
 	{
 		max = a;
 	}
@@ -110,37 +265,37 @@ int main()
 	max = (a > b && a > c) ? a : (b > c) ? b : c;*/
 
 
-	/*Користувач вводить чотиризначне число.Необхідно поміняти в цьому числі 1 і 2 цифри, 
+	/*Користувач вводить чотиризначне число.Необхідно поміняти в цьому числі 1 і 2 цифри,
 	а також 3 і 4 цифри.Якщо користувач вводить не чотиризначне число, вивести повідомлення про помилку.*/
 
 	// 1234  ->  2143
-	int n;
-	cin >> n;
-	if (n >= 1000 && n <= 9999)
-	{
-		int d1 = n / 1000;        // 1 цифра
-		int d2 = n / 100 % 10;    // 2 цифра
-		int d3 = n / 10 % 10;     // 3 цифра
-		int d4 = n % 10;          // 4 цифра
-		int new_n = d2 * 1000 + d1 * 100 + d4 * 10 + d3;
-		cout << new_n << endl;
-	}
-	else
-	{
-		cout << "Error: Not a four-digit number!" << endl;
-	}
+	//int n;
+	//cin >> n;
+	//if (n >= 1000 && n <= 9999)
+	//{
+	//	int d1 = n / 1000;        // 1 цифра
+	//	int d2 = n / 100 % 10;    // 2 цифра
+	//	int d3 = n / 10 % 10;     // 3 цифра
+	//	int d4 = n % 10;          // 4 цифра
+	//	int new_n = d2 * 1000 + d1 * 100 + d4 * 10 + d3;
+	//	cout << new_n << endl;
+	//}
+	//else
+	//{
+	//	cout << "Error: Not a four-digit number!" << endl;
+	//}
 
 
 	// 20.01.2026
 
 
 	/*Користувач вводить із клавіатури грошову суму в гривнях і копійках
-	(гривні та копійки вводяться в різні змінні).Сума може бути введена 
+	(гривні та копійки вводяться в різні змінні).Сума може бути введена
 	як правильно(наприклад 19 грн. 90 коп.), так і неправильно
-	(наприклад 22 грн. 978 коп.).Написати програму, яка, використовуючи 
-	тільки лінійний алгоритм, здійснить коригування введеної грошової 
+	(наприклад 22 грн. 978 коп.).Написати програму, яка, використовуючи
+	тільки лінійний алгоритм, здійснить коригування введеної грошової
 	суми в правильну форму.
-	Наприклад, якщо користувач ввів 11 грн. 150 коп., програма повинна 
+	Наприклад, якщо користувач ввів 11 грн. 150 коп., програма повинна
 	вивести на екран суму 12 грн. 50 коп.*/
 
 
@@ -152,14 +307,14 @@ int main()
 	cout << a << " грн. " << b << " коп." << endl;*/
 
 	/*Користувач вводить із клавіатури час у секундах, що минув від початку дня.
-	Вивести на екран поточний час у годинах, хвилинах і секундах.Порахувати 
+	Вивести на екран поточний час у годинах, хвилинах і секундах.Порахувати
 	скільки годин, хвилин і секунд залишилося до опівночі.*/
 
 	/*int s;
 	cin >> s;
 	s = 86400 - s;
 	cout << s / 3600 << ":" << s / 60 % 60 << ":" << s % 60 << endl;*/
-	
+
 
 	//Користувач вводить із клавіатури три цілих числа.Порахувати їхню суму, добуток і середнє арифметичне.
 

@@ -1,5 +1,6 @@
 ﻿#include<iostream>
 #include<Windows.h>
+#include<iomanip>
 
 using namespace std;
 
@@ -8,15 +9,115 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+
+	// 03.02.2026
+
+	// type name[rows][col];
+
+	const int rows = 4;
+	const int cols = 4;
+	int matrix[rows][cols]; /*=
+	{ 
+		1,2,3,4, 
+		5,6,7, 8, 
+		9,10,11,12
+	};*/
+
+	srand(time(0));
+	int minValue = 0;
+	int maxValue = 10;
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			matrix[i][j] = rand() % (maxValue - minValue + 1) + minValue;
+		}
+	}
+
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			cout << setw(5) << matrix[i][j];
+		}
+		cout << endl;
+	}
+
+	/*int iRowMax = 0;
+	int iColMax = 0;
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			if (matrix[i][j] > matrix[iRowMax][iColMax])
+			{
+				iRowMax = i;
+				iColMax = j;
+			}
+		}
+	}
+
+	cout << "Max element: " << matrix[iRowMax][iColMax] << " at index [" << iRowMax << "][" << iColMax << "]" << endl;*/
+
+	//=============================================
+
+	/*for (size_t i = 0; i < rows; i++)
+	{
+		int rowSum = 0;
+		for (size_t j = 0; j < cols; j++)
+		{
+			rowSum += matrix[i][j];
+		}
+		cout << "Sum of row " << i << ": " << rowSum << endl;
+	}
+	cout << endl;
+
+	for (size_t j = 0; j < cols; j++)
+	{
+		int colSum = 0;
+		for (size_t i = 0; i < rows; i++)
+		{
+			colSum += matrix[i][j];
+		}
+		cout << "Sum of column " << j << ": " << colSum << endl;
+	}*/
+
+	/*for (size_t j = 0; j < cols / 2; j++)
+	{
+		for (size_t i = 0; i < rows; i++)
+		{
+			swap(matrix[i][j], matrix[i][cols - 1 - j]);
+		}
+	}*/
+	
+
+	for (size_t i = 0; i < rows / 2; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			swap(matrix[i][j], matrix[rows - 1 - i][j]);
+		}
+	}
+
+	cout << endl;
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			cout << setw(5) << matrix[i][j];
+		}
+		cout << endl;
+	}
+
 	// 29.01.2026
 
 	// type name[size];
 
-	//int a[64] = { 1,3,54,67,8,89 };
+	/*int arr[] = { 1 };
 
-	const int size = 10;
+	const int size = 10;*/
 
-	int arr[size], count = 0;
+	//int arr[size], count = 0;
 
 	/*for (size_t i = 0; i < size; i++)
 	{
@@ -24,20 +125,20 @@ int main()
 		cin >> arr[i];
 	}*/
 
-	srand(time(0));
+	/*srand(time(0));
 	int minValue = 0;
 	int maxValue = 9;
 	for (size_t i = 0; i < size; i++)
 	{
 		arr[i] = rand() % (maxValue - minValue + 1) + minValue;
-	}
+	}*/
 
-	cout << "Array elements: ";
+	/*cout << "Array elements: ";
 	for (size_t i = 0; i < size; i++)
 	{
 		cout << arr[i] << " ";
 	}
-	cout << endl;
+	cout << endl;*/
 
 	//=============================================
 

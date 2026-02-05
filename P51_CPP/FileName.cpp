@@ -2,7 +2,10 @@
 #include<Windows.h>
 #include<iomanip>
 
+#include"myFunc.h"
+
 using namespace std;
+
 
 int main()
 {
@@ -10,20 +13,52 @@ int main()
 	SetConsoleOutputCP(1251);
 
 
+	// 05.02.2026
+
+	const int size = 10;
+	int arr[size];
+	setArray(arr, size);
+	//setArray(arr, size); // 0 - 9
+	printArray(arr, size);
+	int max = maxValueArray(arr, size);
+	cout << "Max element: " << max << endl;
+	cout << "Index of element: " << findIndexArray(arr, size, 99) << endl;
+	
+
+
+
+	/*starLine();
+	starLine(20);
+	starLine(30, '$');
+
+
+	cout << sum() << endl;*/
+
+	/*int a, b;
+
+	starLine();
+
+	cout << sum(2, 0) << endl;*/
+
+
+	//cout << avg(3, 4, 6) << endl;
+
+
 	// 03.02.2026
 
 	// type name[rows][col];
 
-	const int rows = 4;
+	/*const int rows = 4;
 	const int cols = 4;
-	int matrix[rows][cols]; /*=
+	int matrix[rows][cols]; */
+	/*=
 	{ 
 		1,2,3,4, 
 		5,6,7, 8, 
 		9,10,11,12
 	};*/
 
-	srand(time(0));
+	/*srand(time(0));
 	int minValue = 0;
 	int maxValue = 10;
 	for (size_t i = 0; i < rows; i++)
@@ -41,7 +76,7 @@ int main()
 			cout << setw(5) << matrix[i][j];
 		}
 		cout << endl;
-	}
+	}*/
 
 	/*int iRowMax = 0;
 	int iColMax = 0;
@@ -91,7 +126,7 @@ int main()
 	}*/
 	
 
-	for (size_t i = 0; i < rows / 2; i++)
+	/*for (size_t i = 0; i < rows / 2; i++)
 	{
 		for (size_t j = 0; j < cols; j++)
 		{
@@ -107,7 +142,7 @@ int main()
 			cout << setw(5) << matrix[i][j];
 		}
 		cout << endl;
-	}
+	}*/
 
 	// 29.01.2026
 
@@ -383,12 +418,12 @@ int main()
 
 
 
-	int a;
+	/*int a;
 	do
 	{
 		cin >> a;
 	} while (a < 1 || a > 10);
-	cout << a << endl;
+	cout << a << endl;*/
 
 
 

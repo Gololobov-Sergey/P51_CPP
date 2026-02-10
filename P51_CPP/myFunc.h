@@ -18,12 +18,6 @@ void starLine(int count = 10, char symbol = '*')
 	cout << endl;
 }
 
-
-int sum(int a = 0, int b = 10)
-{
-	return a + b;
-}
-
 bool isEven(int a)
 {
 	return a % 2 == 0;
@@ -146,3 +140,57 @@ double avgArray(T arr[], int size)
 	return (double)sum / size;
 }
 
+
+template<class T1, class T2, class T3>
+auto sum(T1 a, T2 b, T3 c) -> decltype(a + b)
+{
+	return a + b + c;
+}
+
+
+template<class T>
+void setMatrix(T matrix[10][10], int rows, int cols, T minValue = 0, T maxValue = 9)
+{
+	srand(time(0));
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			matrix[i][j] = rand() % (maxValue - minValue + 1) + minValue;
+		}
+	}
+}
+
+
+
+template<class T>
+void printMatrix(T matrix[10][10], int rows, int cols)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			cout << setw(5) << matrix[i][j];
+		}
+		cout << endl;
+	}
+}
+
+
+template<class T>
+T maxValueMatrix(T matrix[10][10], int rows, int cols)
+{
+	int iMax = 0, jMax = 0;
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			if (matrix[i][j] > matrix[iMax][jMax])
+			{
+				iMax = i;
+				jMax = j;
+			}
+		}
+	}
+	return matrix[iMax][jMax];
+}

@@ -15,11 +15,27 @@ int main()
 
 	// 10.02.2026
 
-	const int size = 10;
+	/*const int size = 10;
 	char arr[size];
 	setArray(arr, size);
-	printArray(arr, size);
+	printArray(arr, size);*/
 
+	/*cout << sum('A', 4, 2.5) << endl;
+
+	auto t = 0.0;
+
+	int a = 10;
+	float b = 3.14f;
+
+	decltype(a + b) c;*/
+
+
+
+	const int rows = 8;
+	const int cols = 4;
+	int matrix[10][10];
+	setMatrix(matrix, rows, cols);
+	printMatrix(matrix, rows, cols);
 
 
 	// 05.02.2026

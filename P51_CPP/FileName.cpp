@@ -7,22 +7,31 @@
 using namespace std;
 
 
+
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+	// 10.02.2026
+
+	const int size = 10;
+	char arr[size];
+	setArray(arr, size);
+	printArray(arr, size);
+
+
 
 	// 05.02.2026
 
-	const int size = 10;
-	int arr[size];
-	setArray(arr, size);
-	//setArray(arr, size); // 0 - 9
-	printArray(arr, size);
-	int max = maxValueArray(arr, size);
-	cout << "Max element: " << max << endl;
-	cout << "Index of element: " << findIndexArray(arr, size, 99) << endl;
+	//const int size = 10;
+	//int arr[size];
+	//setArray(arr, size);
+	////setArray(arr, size); // 0 - 9
+	//printArray(arr, size);
+	//int max = maxValueArray(arr, size);
+	//cout << "Max element: " << max << endl;
+	//cout << "Index of element: " << findIndexArray(arr, size, 99) << endl;
 	
 
 

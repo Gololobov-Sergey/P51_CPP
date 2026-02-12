@@ -13,6 +13,96 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+	// 12.02.2026
+
+	/*int a = 5;
+	cout << a << endl;
+	cout << typeid(a).name() << endl;
+	cout << sizeof(a) << endl;
+	cout << &a << endl;
+
+	int* p = &a;
+
+	*p = 100;
+	cout << p << endl;
+	cout << a << endl;
+
+	int b = 4;
+	p = &b;
+	cout << p << endl;
+	*p = 9999;
+	cout << b << endl;
+
+	float c = 44.44;
+	float* pc = &c;
+
+	int* p1, p2;*/
+
+
+	//int a = 5;
+	//int b = 10;
+
+	//// ++ -- + - += -= 
+	//// == != 
+
+	//int* pc = nullptr;
+	//int* pa = &a;
+	//int* pb = &b;
+	//cout << pa << endl;
+	//cout << &b << endl;
+	//pa = pa + 1; // p = p + n * sizeof(type);
+	//cout << pa << endl;
+	//cout << *pa << endl;
+	//cout << pc << endl;
+
+	//cout << (pa == nullptr) << endl;
+
+
+
+	//int arr[] = { 99,2,3,4,5 };
+
+	//*(arr + 2) = 888;
+	//*arr = 8;
+
+	//for (size_t i = 0; i < 5; i++)
+	//{
+	//	cout << *(arr + i) << " ";  // arr[i] = *(arr + i)
+	//}
+	//cout << endl;
+
+
+	//for (int* i = arr; i != &arr[5]; i++)
+	//{
+	//	cout << *i << " ";
+	//}
+
+
+	//int* p = arr + 1;
+
+	//const int size = 10;
+	//int arr[size];
+	//setArray(arr, size);
+	//printArray(arr, size);
+
+	//int size = 1000000;
+	//cout << "Input size: ";
+	////cin >> size;
+
+	//int* p;
+
+	//p = new int[size];
+	//setArray(p, size);
+	//printArray(p, size);
+
+	//delete p;
+
+	char a = 5;
+	char* p = &a;
+	cout << sizeof(p) << endl;
+
+
+	//*p = 1234;
+
 	// 10.02.2026
 
 	/*const int size = 10;
@@ -31,11 +121,11 @@ int main()
 
 
 
-	const int rows = 8;
+	/*const int rows = 8;
 	const int cols = 4;
 	int matrix[10][10];
 	setMatrix(matrix, rows, cols);
-	printMatrix(matrix, rows, cols);
+	printMatrix(matrix, rows, cols);*/
 
 
 	// 05.02.2026
@@ -48,7 +138,7 @@ int main()
 	//int max = maxValueArray(arr, size);
 	//cout << "Max element: " << max << endl;
 	//cout << "Index of element: " << findIndexArray(arr, size, 99) << endl;
-	
+
 
 
 
@@ -77,9 +167,9 @@ int main()
 	const int cols = 4;
 	int matrix[rows][cols]; */
 	/*=
-	{ 
-		1,2,3,4, 
-		5,6,7, 8, 
+	{
+		1,2,3,4,
+		5,6,7, 8,
 		9,10,11,12
 	};*/
 
@@ -149,7 +239,7 @@ int main()
 			swap(matrix[i][j], matrix[i][cols - 1 - j]);
 		}
 	}*/
-	
+
 
 	/*for (size_t i = 0; i < rows / 2; i++)
 	{
@@ -212,7 +302,7 @@ int main()
 
 
 	/*cout << endl << "Reversed list: ";
-	for (int i = 0; i < size / 2; i++) 
+	for (int i = 0; i < size / 2; i++)
 	{
 		swap(arr[i], arr[size - 1 - i]);
 	}
@@ -243,7 +333,7 @@ int main()
 
 	//=============================================
 
-	/*int count0 = 0;	
+	/*int count0 = 0;
 	for (size_t i = 0; i < size; i++)
 	{
 		if (arr[i] == 0)

@@ -30,7 +30,7 @@ float avg(int a, int b, int c)
 
 
 template<class T>
-void printArray(T arr[], int size)
+void printArray(T* arr, int size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -41,7 +41,7 @@ void printArray(T arr[], int size)
 
 
 template<class T>
-void setArray(T arr[], int size)
+void setArray(T* arr, int size)
 {
 	srand(time(0));
 	for (size_t i = 0; i < size; i++)

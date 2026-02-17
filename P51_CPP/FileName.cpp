@@ -13,6 +13,73 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+
+	// 17.02.2026
+
+
+	/*int a = 5;          int b = 10;
+	int* p = &a;        int& r = b;
+	*p = 100;           r = 100;
+	p = &b;             r = a;*/
+
+
+
+
+
+	/*typedef unsigned char UC;
+	UC s;*/
+
+	int size;
+	cout << "Input size: ";
+	cin >> size;
+
+	int* a = new int[size];
+	setArray(a, size, 20, 80);
+	printArray(a, size);
+
+	append(a, size, 999);
+	printArray(a, size);
+	pop(a, size);
+	printArray(a, size);
+
+
+	/*int sizeB = 0;
+	for (size_t i = 0; i < size; i++)
+	{
+		if (a[i] % 2 == 0)
+			sizeB++;
+	}
+
+	int* b = new int[sizeB];
+	sizeB = 0;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		if (a[i] % 2 == 0)
+			b[sizeB++] = a[i];
+	}*/
+
+	/*int* b = nullptr;
+	int sizeB = 0;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		if (a[i] % 2 == 0)
+		{
+			b = append(b, &sizeB, a[i]);
+		}
+	}
+
+
+	printArray(b, sizeB);*/
+
+
+	delete a;
+
+
+
+
+
 	// 12.02.2026
 
 	/*int a = 5;
@@ -96,9 +163,9 @@ int main()
 
 	//delete p;
 
-	char a = 5;
+	/*char a = 5;
 	char* p = &a;
-	cout << sizeof(p) << endl;
+	cout << sizeof(p) << endl;*/
 
 
 	//*p = 1234;

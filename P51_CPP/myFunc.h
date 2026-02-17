@@ -194,3 +194,52 @@ T maxValueMatrix(T matrix[10][10], int rows, int cols)
 	}
 	return matrix[iMax][jMax];
 }
+
+template<class T>
+void append(T*& arr, int& size, T value)
+{
+	T* temp = new T[size + 1];
+	for (size_t i = 0; i < size; i++)
+	{
+		temp[i] = arr[i];
+	}
+	temp[size] = value;
+	delete arr;
+	size++;
+	arr = temp;
+}
+
+template<class T>
+void pop(T*& arr, int& size)
+{
+	T* temp = new T[size - 1];
+	for (size_t i = 0; i < size - 1; i++)
+	{
+		temp[i] = arr[i];
+	}
+	delete arr;
+	size--;
+	arr = temp;
+}
+
+
+
+template<class T>
+void append(T*& arr, int& size, int index)
+{
+
+}
+
+
+template<class T>
+void pop(T*& arr, int& size, int index)
+{
+
+}
+
+template<class T>
+void append(T*& arr, int& size, T* b, int sizeB, int index)
+{
+
+}
+

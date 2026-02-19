@@ -30,7 +30,7 @@ float avg(int a, int b, int c)
 
 
 template<class T>
-void printArray(T* arr, int size)
+void printArray(const T* arr, const int& size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -51,7 +51,7 @@ void setArray(T* arr, int size)
 }
 
 
-void setArray(int arr[], int size, int minValue = 0, int maxValue = 9)
+void setArray(int* arr, int size, int minValue = 0, int maxValue = 9)
 {
 	srand(time(0));
 	for (size_t i = 0; i < size; i++)
@@ -62,7 +62,7 @@ void setArray(int arr[], int size, int minValue = 0, int maxValue = 9)
 
 
 template<class T>
-T maxValueArray(T arr[], int size)
+T maxValueArray(const T* arr, int size)
 {
 	int iMax = 0;
 	for (size_t i = 1; i < size; i++)
@@ -196,7 +196,7 @@ T maxValueMatrix(T matrix[10][10], int rows, int cols)
 }
 
 template<class T>
-void append(T*& arr, int& size, T value)
+void append(T*& arr, size_t& size, T value)
 {
 	T* temp = new T[size + 1];
 	for (size_t i = 0; i < size; i++)
@@ -210,7 +210,7 @@ void append(T*& arr, int& size, T value)
 }
 
 template<class T>
-void pop(T*& arr, int& size)
+void pop(T*& arr, size_t& size)
 {
 	T* temp = new T[size - 1];
 	for (size_t i = 0; i < size - 1; i++)
@@ -225,21 +225,65 @@ void pop(T*& arr, int& size)
 
 
 template<class T>
-void append(T*& arr, int& size, int index)
+void insert(T*& arr, size_t& size, size_t index, T value)
 {
-
+	if (index < 0 || index > size) return; // Проверка на корректность индекса
+	
+	T* temp = new T[size + 1];
+	for (size_t i = 0; i < index; i++)
+	{
+		temp[i] = arr[i];
+	}
+	temp[index] = value;
+	for (size_t i = index; i < size; i++)
+	{
+		temp[i + 1] = arr[i];
+	}
+	delete[] arr;
+	size++;
+	arr = temp;
 }
-
 
 template<class T>
-void pop(T*& arr, int& size, int index)
+void pop(T*& arr, size_t& size, size_t index)
 {
 
 }
 
 template<class T>
-void append(T*& arr, int& size, T* b, int sizeB, int index)
+void insert(T*& arr, size_t& size, T* b, size_t sizeB, size_t index)
 {
+	if (index < 0 || index > size) return; // Проверка на корректность индекса
+
+	T* temp = new T[size + sizeB];
+	for (size_t i = 0; i < index; i++)
+	{
+		temp[i] = arr[i];
+	}
+	for (size_t i = 0; i < sizeB; i++)
+	{
+		temp[index + i] = b[i];
+	}
+	for (size_t i = index; i < size; i++)
+	{
+		temp[sizeB + i] = arr[i];
+	}
+
+	delete[] arr;
+	size += sizeB;
+	arr = temp;
 
 }
 
+void my_swap(int& a, int& b)
+{
+	int t = a;
+	a = b;
+	b = t;
+	cout << "In func: " << a << " " << b << endl;
+}
+
+void ffff(const int* a)
+{
+	//*a = 100;
+}

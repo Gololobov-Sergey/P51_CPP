@@ -14,10 +14,60 @@ int main()
 	SetConsoleOutputCP(1251);
 
 
+	// 19.02.2026
+
+	/*int a = 5, b = 4;
+	my_swap(a, b);
+	cout << a << " " << b << endl;*/
+
+
+	//int a = 5;
+	//int b = 10;
+	//
+	//const int* p = &a; // покажчик на константное значение
+	////*p = 100;        // Error
+	//p = &b;            // OK
+
+
+	//int a = 5;
+	//int b = 10;
+
+	//int* const p = &a; // константный покажчик
+	//*p = 100;          // OK
+	////p = &b;          // Error
+
+
+	//int a = 5;
+	//int b = 10;
+	//const int* const p = &a; // константный покажчик на константное значение
+	////*p = 100;              // Error
+	////p = &b;                // Error
+
+
+	//int a = 5;
+	//int b = 10;
+
+	//const int& r = a; // константная ссылка
+	////r = 100;          // Error
+	////r = b;            // Error
+
+
+
+	//Написати функцію, яка отримує покажчик на статичний масив 
+	// і його розмір.Функція розподіляє додатні, від'ємні та 
+	// нульові елементи в окремі динамічні масиви.
+
+	size_t size = 10;
+	int* a = new int[size];
+	setArray(a, size, -5, 5);
+	printArray(a, size);
+
+
+
 	// 17.02.2026
 
 
-	/*int a = 5;          int b = 10;
+	/*int a = 5;        int b = 10;
 	int* p = &a;        int& r = b;
 	*p = 100;           r = 100;
 	p = &b;             r = a;*/
@@ -29,18 +79,23 @@ int main()
 	/*typedef unsigned char UC;
 	UC s;*/
 
-	int size;
-	cout << "Input size: ";
+	/*size_t size;
+	cout << "Input size A: ";
 	cin >> size;
 
 	int* a = new int[size];
 	setArray(a, size, 20, 80);
-	printArray(a, size);
+	printArray(a, size);*/
 
-	append(a, size, 999);
-	printArray(a, size);
-	pop(a, size);
-	printArray(a, size);
+
+
+	/*int* b = new int[size];
+	setArray(b, size);
+	printArray(b, size);
+
+	insert(a, size, new int{10}, 1, 3);
+	printArray(a, size);*/
+
 
 
 	/*int sizeB = 0;
@@ -74,7 +129,7 @@ int main()
 	printArray(b, sizeB);*/
 
 
-	delete a;
+	//delete a;
 
 
 

@@ -30,7 +30,7 @@ float avg(int a, int b, int c)
 
 
 template<class T>
-void printArray(const T* arr, const int& size)
+void printArray(const T* arr, int size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -287,3 +287,34 @@ void ffff(const int* a)
 {
 	//*a = 100;
 }
+
+void rozpodil(int* arr, size_t size, int*& positiv, size_t& sizePositiv, int*& negativ, size_t& sizeNegativ, int*& zero, size_t& sizeZero)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		if (arr[i] > 0)
+		{
+			append(positiv, sizePositiv, arr[i]);
+		}
+		else
+		{
+			if (arr[i] < 0)
+			{
+				append(negativ, sizeNegativ, arr[i]);
+			}
+			else
+			{
+				append(zero, sizeZero, arr[i]);
+			}
+		}
+		
+	}
+}
+
+// Створити функцію, що дозволяє видаляти блок елементів, 
+// починаючи з довільного індексу масиву.
+
+
+//Написати функцію, яка отримує покажчик на динамічний 
+// масив і його розмір.Функція повинна видалити з масиву 
+// всі від'ємні числа і повернути покажчик на новий динамічний масив.

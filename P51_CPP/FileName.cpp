@@ -62,6 +62,16 @@ int main()
 	setArray(a, size, -5, 5);
 	printArray(a, size);
 
+	int* positive = nullptr;
+	int* negative = nullptr;
+	int* zero = nullptr;
+	size_t sizePositive = 0;
+	size_t sizeNegative = 0;
+	size_t sizeZero = 0;
+	rozpodil(a, size, positive, sizePositive, negative, sizeNegative, zero, sizeZero);
+	printArray(positive, sizePositive);
+	printArray(negative, sizeNegative);
+	printArray(zero, sizeZero);
 
 
 	// 17.02.2026

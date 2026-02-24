@@ -54,14 +54,45 @@ int main()
 	//=============================================================
 
 
-	size_t size = 20;
+	/*size_t size = 20;
 	int* a = new int[size];
 	setArray(a, size, 0, 1000);
 	printArray(a, size);
 	sortArray(a, size, evenFirst);
-	printArray(a, size);
+	printArray(a, size);*/
 
 
+	//===========================================================
+
+	/*void(*message)() = getFunc();
+	message();*/
+
+	/*int len;
+	cin >> len;
+
+	void(*director)() = prorab(len);
+	director();*/
+
+	//==============================================================
+
+	/*int a = 9;
+	int* pa = &a;
+	int** ppa = &pa;
+
+	cout << pa << endl;
+	cout << *pa << endl;
+	cout << *ppa << endl;
+	cout << **ppa << endl;*/
+
+
+	int row, col;
+	cin >> row >> col;
+	int** p = nullptr;
+	createArray2D(p, row, col);
+	setArray2D(p, row, col);
+	printArray2D(p, row, col);
+
+	deleteArray2D(p, row);
 
 	// 19.02.2026
 

@@ -375,3 +375,82 @@ double pow1(double a, double b)
 {
 	return pow(a, b);
 }
+
+
+void (*getFunc())()
+{
+	return hello;
+}
+
+
+void kopatel()
+{
+	cout << "Копає один робітник з лопатою" << endl;
+}
+
+void kopatel3()
+{
+	cout << "Копають три робітники з лопатами і одиз з кіркою" << endl;
+}
+
+void exkavator()
+{
+	cout << "Працює екскаватор, робітники курять в сторонці" << endl;
+}
+
+void(*prorab(int len))()
+{
+	if (len < 100)
+		return kopatel;
+	if (len < 500)
+		return kopatel3;
+	return exkavator;
+}
+
+template<class T>
+void createArray2D(T**& p, int row, int col)
+{
+	p = new int* [row];
+	for (size_t i = 0; i < row; i++)
+	{
+		p[i] = new int[col];
+	}
+}
+
+
+template<class T>
+void deleteArray2D(T**& p, int row)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		delete[] p[i];
+	}
+	delete[] p;
+	p = nullptr;
+}
+
+
+template<class T>
+void setArray2D(T** p, int row, int col)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			p[i][j] = rand() % 10;
+		}
+	}
+}
+
+template<class T>
+void printArray2D(T** p, int row, int col)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			cout << p[i][j] << " ";
+		}
+		cout << endl;
+	}
+}

@@ -14,6 +14,55 @@ int main()
 	SetConsoleOutputCP(1251);
 
 
+	// 24.02.2026
+
+
+	//cout << starLine << endl;
+
+
+	// type (*name) (param)
+
+	/*void (*pFunc)(int, char);
+
+	pFunc = starLine;
+	pFunc(20, '$');*/
+	
+
+	/*void(*message)();
+	message = hello;
+	message();
+	message = goodbye;
+	message();
+
+	void(*arrFunc[])() = {hello, goodbye};
+	for (size_t i = 0; i < 2; i++)
+	{
+		arrFunc[i]();
+	}*/
+
+	//===========================================================
+
+	/*double(*operation[])(double, double) = { add, diff, mult, div, pow1 };
+	double a, b;
+	cin >> a >> b;
+	cout << "Operation: 1 +, 2 - , 3 *, 4 /, 5 ^ : ";
+	int choice;
+	cin >> choice;
+	double res = operation[choice - 1](a, b);
+	cout << res << endl;*/
+
+	//=============================================================
+
+
+	size_t size = 20;
+	int* a = new int[size];
+	setArray(a, size, 0, 1000);
+	printArray(a, size);
+	sortArray(a, size, evenFirst);
+	printArray(a, size);
+
+
+
 	// 19.02.2026
 
 	/*int a = 5, b = 4;
@@ -57,7 +106,7 @@ int main()
 	// і його розмір.Функція розподіляє додатні, від'ємні та 
 	// нульові елементи в окремі динамічні масиви.
 
-	size_t size = 10;
+	/*size_t size = 10;
 	int* a = new int[size];
 	setArray(a, size, -5, 5);
 	printArray(a, size);
@@ -71,7 +120,7 @@ int main()
 	rozpodil(a, size, positive, sizePositive, negative, sizeNegative, zero, sizeZero);
 	printArray(positive, sizePositive);
 	printArray(negative, sizeNegative);
-	printArray(zero, sizeZero);
+	printArray(zero, sizeZero);*/
 
 
 	// 17.02.2026

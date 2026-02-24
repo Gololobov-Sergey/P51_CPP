@@ -112,15 +112,36 @@ int countValueArray(T arr[], int size, T value)
 	return count;
 }
 
+template<class T>
+bool asc(T a, T b)
+{
+	return a > b;
+}
 
 template<class T>
-void sortArray(T arr[], int size)
+bool desc(T a, T b)
+{
+	return a < b;
+}
+
+bool evenFirst(int a, int b)
+{
+	if (a % 2 == 1 && b % 2 == 0)
+		return true;
+	if (a % 2 == 0 && b % 2 == 1)
+		return false;
+	return asc(a, b);
+}
+
+
+template<class T>
+void sortArray(T* arr, int size, bool(*method)(T, T))
 {
 	for (size_t i = 0; i < size - 1; i++)
 	{
 		for (size_t j = 0; j < size - 1 - i; j++)
 		{
-			if (arr[j] > arr[j + 1])
+			if (method(arr[j], arr[j + 1]))
 			{
 				swap(arr[j], arr[j + 1]);
 			}
@@ -318,3 +339,39 @@ void rozpodil(int* arr, size_t size, int*& positiv, size_t& sizePositiv, int*& n
 //Написати функцію, яка отримує покажчик на динамічний 
 // масив і його розмір.Функція повинна видалити з масиву 
 // всі від'ємні числа і повернути покажчик на новий динамічний масив.
+
+
+void hello()
+{
+	cout << "Hello, world!" << endl;
+}
+
+void goodbye()
+{
+	cout << "Goodbye, world!" << endl;
+}
+
+double add(double a, double b)
+{
+	return a + b;
+}
+
+double diff(double a, double b)
+{
+	return a - b;
+}
+
+double mult(double a, double b)
+{
+	return a * b;
+}
+
+double div(double a, double b)
+{
+	return a / b;
+}
+
+double pow1(double a, double b)
+{
+	return pow(a, b);
+}

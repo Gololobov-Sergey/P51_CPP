@@ -118,6 +118,11 @@ bool asc(T a, T b)
 	return a > b;
 }
 
+bool ascValue(int* a, int* b)
+{
+	return *a > *b;
+}
+
 template<class T>
 bool desc(T a, T b)
 {
@@ -135,7 +140,7 @@ bool evenFirst(int a, int b)
 
 
 template<class T>
-void sortArray(T* arr, int size, bool(*method)(T, T))
+void sortArray(T* arr, int size, bool(*method)(T, T) = asc)
 {
 	for (size_t i = 0; i < size - 1; i++)
 	{
@@ -454,3 +459,120 @@ void printArray2D(T** p, int row, int col)
 		cout << endl;
 	}
 }
+
+//template<class T>
+//void addRowArray2D(T**& arr, int& row, int col)
+//{
+//	T** temp = new T * [row + 1];
+//
+//	for (size_t i = 0; i < row; i++)
+//	{
+//		temp[i] = arr[i];
+//	}
+//
+//	temp[row] = new T[col]{ 0 };
+//
+//	delete[] arr;
+//
+//	row++;
+//
+//	arr = temp;
+//}
+
+template<class T>
+void delRowArray2D(T**& arr, int& row)
+{
+	T** temp = new T * [row - 1];
+	for (size_t i = 0; i < row-1; i++)
+	{
+		temp[i] = arr[i];
+	}
+	delete arr[row - 1];
+	delete[] arr;
+	row--;
+	arr = temp;
+}
+
+template<class T>
+void addRowArray2D(T**& arr, int& row, int col, T* b = nullptr)
+{
+	T** temp = new T * [row + 1];
+
+	for (size_t i = 0; i < row; i++)
+	{
+		temp[i] = arr[i];
+	}
+
+	temp[row] = new T[col]{0};
+	if (b != nullptr)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			temp[row][i] = b[i];
+		}
+	}
+
+	delete[] arr;
+
+	row++;
+
+	arr = temp;
+}
+
+template<class T>
+void insertRowArray2D(T**& arr, int& row, int col, int index, T* b = nullptr)
+{
+	T** temp = new T * [row + 1];
+
+	for (size_t i = 0; i < index; i++)
+	{
+		temp[i] = arr[i];
+	}
+
+	temp[index] = new T[col]{ 0 };
+	if (b != nullptr)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			temp[index][i] = b[i];
+		}
+	}
+
+	for (size_t i = index; i < row; i++)
+	{
+		temp[i + 1] = arr[i];
+	}
+
+	delete[] arr;
+
+	row++;
+
+	arr = temp;
+}
+
+
+template<class T>
+void popArrayMatrix(T**& arr, int& rows, int index)
+{
+	if (index < 0 || index >= rows) 
+	{
+		return;
+	}
+	T** temp = new T * [rows - 1];
+	for (int i = 0; i < index; i++) 
+	{
+		temp[i] = arr[i];
+	}
+	for (int i = index; i < rows - 1; i++) 
+	{
+		temp[i] = arr[i + 1];
+	}
+	delete arr[index];
+	delete[] arr;
+	rows--;
+	arr = temp;
+}
+
+// addColumn , end
+// insertColumn , index
+// popColumn , index

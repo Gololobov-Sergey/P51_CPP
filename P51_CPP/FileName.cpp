@@ -14,6 +14,47 @@ int main()
 	SetConsoleOutputCP(1251);
 
 
+	// 26.02.2026
+	
+	// addr[№всесвіту][метагалактика][галактика][сс][планета][континент][країна][місто][вулиця][дом][квартира]
+
+	int row, col;
+	cin >> row >> col;
+	int** p = nullptr;
+	createArray2D(p, row, col);
+	setArray2D(p, row, col);
+	printArray2D(p, row, col);
+
+	
+	//int* a = new int[col];
+	//setArray(a, col);
+	//printArray(a, col);
+	//sortArray(a, row);
+	sortArray(p, row, ascValue);
+	
+	cout << endl;
+	printArray2D(p, row, col);
+
+	//cout << endl;
+	//int* a = new int[col];
+	//setArray(a, col);
+	//printArray(a, col);
+	//cout << endl;
+	//insertRowArray2D(p, row, col, 2, a);
+	//printArray2D(p, row, col);
+
+
+	//cout << endl;
+	//delRowArray2D(p, row);
+	//printArray2D(p, row, col);
+
+	deleteArray2D(p, row);
+
+	
+
+	// p[i][j] == *(*(p+i)+j)
+
+
 	// 24.02.2026
 
 
@@ -85,14 +126,14 @@ int main()
 	cout << **ppa << endl;*/
 
 
-	int row, col;
-	cin >> row >> col;
-	int** p = nullptr;
-	createArray2D(p, row, col);
-	setArray2D(p, row, col);
-	printArray2D(p, row, col);
+	//int row, col;
+	//cin >> row >> col;
+	//int** p = nullptr;
+	//createArray2D(p, row, col);
+	//setArray2D(p, row, col);
+	//printArray2D(p, row, col);
 
-	deleteArray2D(p, row);
+	//deleteArray2D(p, row);
 
 	// 19.02.2026
 

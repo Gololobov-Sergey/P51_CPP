@@ -14,26 +14,96 @@ int main()
 	SetConsoleOutputCP(1251);
 
 
+
+	// 03.03.2026
+
+	// "mama"
+
+	//char st[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+
+	//char st[] = "Hello";
+
+	//int arr[] = { 1,2,3,4,5 };
+
+	//cout << arr << endl;
+	//cout << st + 2 << endl;
+	//cout << (void*)st << endl;
+
+
+	//char name[256];
+	//cin.getline(name, 256);
+	//cout << name << endl;
+	////cout << lenStr(name) << endl;
+	//cout << strlen(name) << endl;
+	//int len = strlen(name);
+	//char* str = new char[len + 1];
+	//strcpy_s(str, len+1, name);
+
+	//cout << str << endl;
+	
+
+
+	
+	//char* st1 = getString();
+	//char* st2 = getString();
+	//
+	//cout << "st1 : " << st1 << endl;
+	//cout << "st2 : " << st2 << endl;
+
+	//strcpy_s(st1, strlen(st2) + 1, st2);
+	//strncpy_s(st1, strlen(st2) + 1, st2, 5);
+	
+	//strcat_s(st1, strlen(st1) + strlen(st2) + 1, st2);
+	//strncat_s(st1, strlen(st1) + strlen(st2) + 1, st2, 2);
+
+	//_strupr_s(st1, strlen(st1) + 1);
+	//_strlwr_s(st1, strlen(st1) + 1);
+
+	//char* st3 = strchr(st1, '1');
+	//char* st3 = strrchr(st1, '1');
+	//char* st3 = strstr(st1, "mama");
+
+	//int a = atoi(st1);
+	//double a = atof(st1);
+
+	//cout << "st1 : " << st1 << endl;
+	//cout << "st2 : " << st2 << endl;
+	//cout << a << endl;
+
+	//if(st3)
+	//	cout << "st3 : " << st3 << endl;
+
+
+	//cout << swapSymbol("aaaa1111aaaa", 'a', 'b') << endl;
+	cout << countWords("wqer wqer qwer ertert") << endl;
+	cout << countWords("wqer wqer qwer     ertert") << endl;
+	cout << countWords("wqer wqer qwer     ertert  ") << endl;
+	cout << countWords("    wqer wqer qwer     ertert  ") << endl;
+
+
+	// "    wqer wqer qwer     ertert " 
+
+
 	// 26.02.2026
 	
 	// addr[№всесвіту][метагалактика][галактика][сс][планета][континент][країна][місто][вулиця][дом][квартира]
 
-	int row, col;
-	cin >> row >> col;
-	int** p = nullptr;
-	createArray2D(p, row, col);
-	setArray2D(p, row, col);
-	printArray2D(p, row, col);
+	//int row, col;
+	//cin >> row >> col;
+	//int** p = nullptr;
+	//createArray2D(p, row, col);
+	//setArray2D(p, row, col);
+	//printArray2D(p, row, col);
 
-	
-	//int* a = new int[col];
-	//setArray(a, col);
-	//printArray(a, col);
-	//sortArray(a, row);
-	sortArray(p, row, ascValue);
-	
-	cout << endl;
-	printArray2D(p, row, col);
+	//
+	////int* a = new int[col];
+	////setArray(a, col);
+	////printArray(a, col);
+	////sortArray(a, row);
+	//sortArray(p, row, ascValue);
+	//
+	//cout << endl;
+	//printArray2D(p, row, col);
 
 	//cout << endl;
 	//int* a = new int[col];
@@ -48,7 +118,7 @@ int main()
 	//delRowArray2D(p, row);
 	//printArray2D(p, row, col);
 
-	deleteArray2D(p, row);
+	//deleteArray2D(p, row);
 
 	
 

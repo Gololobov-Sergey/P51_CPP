@@ -576,3 +576,93 @@ void popArrayMatrix(T**& arr, int& rows, int index)
 // addColumn , end
 // insertColumn , index
 // popColumn , index
+
+
+//int lenStr(const char* st)
+//{
+//	int i = 0;
+//	while (st[i] != '\0')
+//	{
+//		i++;
+//	}
+//	return i;
+//}
+
+
+char* getString()
+{
+	char buffer[80];
+
+	cin.getline(buffer, 80);
+	int len = strlen(buffer);
+	char* st = new char[len + 1];
+	strcpy_s(st, len + 1, buffer);
+	return st;
+}
+
+char* delSymbol(const char* st, char symbol)
+{
+	int count = 0;
+	int i = 0;
+	while (st[i] != '\0')
+	{
+		if (st[i] == symbol)
+		{
+			count++;
+		}
+		i++;
+	}
+
+	char* temp = new char[strlen(st) - count + 1];
+
+	int j = 0; // new
+	i = 0;     // old
+	while (st[i] != '\0')
+	{
+		if (st[i] != symbol)
+		{
+			temp[j++] = st[i];
+		}
+		i++;
+	}
+
+	temp[j] = '\0';
+
+	return temp;
+}
+
+char* swapSymbol(const char* st, char oldSym, char newSym)
+{
+	char* temp = new char[strlen(st) + 1];
+	int i = 0;
+	while (st[i] != '\0')
+	{
+		if (st[i] == oldSym)
+		{
+			temp[i] = newSym;
+		}
+		else
+		{
+			temp[i] = st[i];
+		}
+		i++;
+	}
+	temp[i] = '\0';
+	return temp;
+}
+
+
+int countWords(const char* st)
+{
+	int count = 0;
+	int i = 0;
+	while (st[i] != '\0')
+	{
+		if (st[i] != ' ' && (st[i + 1] == ' ' || st[i + 1] == '\0'))
+		{
+			count++;
+		}
+		i++;
+	}
+	return count;
+}

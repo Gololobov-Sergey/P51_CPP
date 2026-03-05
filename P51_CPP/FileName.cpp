@@ -1,4 +1,6 @@
-﻿#include<iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+
+#include<iostream>
 #include<Windows.h>
 #include<iomanip>
 
@@ -13,6 +15,61 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+
+	// 05.03.2026
+		
+	char* s1 = getString();
+	char* s2 = getString();
+
+	char* s3 = mystrcpy(s1, s2);
+
+	cout << s1 << endl;
+	cout << s2 << endl;
+	cout << s3 << endl;
+
+	delete s1;
+	delete s2;
+	delete s3;
+
+
+	//int size = 5;
+	//char** pib = new char* [size];
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	pib[i] = getString();
+	//}
+	//cout << endl;
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	cout << pib[i] << endl;
+	//}
+
+	//sortArray(pib, size, compareString);
+
+	//cout << endl;
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	cout << pib[i] << endl;
+	//}
+
+	//char* st1 = getString();
+	//char* st2 = getString();
+	
+	//cout << "st1 : " << st1 << endl;
+	//cout << "st2 : " << st2 << endl;
+	//char* s = replace(" mama papa baba mama papa 12132", "mama", "5555555555");
+	//cout << s << endl;
+	//delete s;
+
+	// mama papa baba mama.
+	//  papa baba .
+
+	//cout << strcmp(st1, st2) << endl;
+	//cout << _stricmp(st1, st2) << endl;
+	//cout << strncmp(st1, st2, 3) << endl;
+	//cout << _strnicmp(st1, st2, 3) << endl;
 
 
 	// 03.03.2026
@@ -75,10 +132,10 @@ int main()
 
 
 	//cout << swapSymbol("aaaa1111aaaa", 'a', 'b') << endl;
-	cout << countWords("wqer wqer qwer ertert") << endl;
-	cout << countWords("wqer wqer qwer     ertert") << endl;
-	cout << countWords("wqer wqer qwer     ertert  ") << endl;
-	cout << countWords("    wqer wqer qwer     ertert  ") << endl;
+	//cout << countWords("wqer wqer qwer ertert") << endl;
+	//cout << countWords("wqer wqer qwer     ertert") << endl;
+	//cout << countWords("wqer wqer qwer     ertert  ") << endl;
+	//cout << countWords("    wqer wqer qwer     ertert  ") << endl;
 
 
 	// "    wqer wqer qwer     ertert " 

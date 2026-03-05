@@ -139,6 +139,11 @@ bool evenFirst(int a, int b)
 }
 
 
+bool compareString(char* s1, char* s2)
+{
+	return strcmp(s1, s2) > 0;
+}
+
 template<class T>
 void sortArray(T* arr, int size, bool(*method)(T, T) = asc)
 {
@@ -460,24 +465,6 @@ void printArray2D(T** p, int row, int col)
 	}
 }
 
-//template<class T>
-//void addRowArray2D(T**& arr, int& row, int col)
-//{
-//	T** temp = new T * [row + 1];
-//
-//	for (size_t i = 0; i < row; i++)
-//	{
-//		temp[i] = arr[i];
-//	}
-//
-//	temp[row] = new T[col]{ 0 };
-//
-//	delete[] arr;
-//
-//	row++;
-//
-//	arr = temp;
-//}
 
 template<class T>
 void delRowArray2D(T**& arr, int& row)
@@ -578,17 +565,6 @@ void popArrayMatrix(T**& arr, int& rows, int index)
 // popColumn , index
 
 
-//int lenStr(const char* st)
-//{
-//	int i = 0;
-//	while (st[i] != '\0')
-//	{
-//		i++;
-//	}
-//	return i;
-//}
-
-
 char* getString()
 {
 	char buffer[80];
@@ -665,4 +641,50 @@ int countWords(const char* st)
 		i++;
 	}
 	return count;
+}
+
+
+char* replace(const char* st, const char* oldSrt, const char* newStr)
+{
+	if (!st)
+		return nullptr;
+
+	char* temp = new char[4000];
+	temp[0] = '\0';
+	const char* p = st;
+	while (p = strstr(st, oldSrt))
+	{
+		strncat(temp, st, p - st);
+		strcat(temp, newStr);
+
+		st = p + strlen(oldSrt);
+	}
+
+	strcat(temp, st);
+
+	char* temp1 = new char[strlen(temp) + 1];
+	strcpy(temp1, temp);
+	delete temp;
+
+	return temp1;
+}
+
+
+char* mystrcpy(char* str1, const char* str2)
+{
+	int count = 0;
+	while (str2[count] != '\0')
+		count++;
+
+	//if (str1 != nullptr)
+	//	delete str1;
+
+	str1 = new char[count + 1];
+
+	for (size_t i = 0; i <= count; i++)
+	{
+		str1[i] = str2[i];
+	}
+
+	return str1;
 }

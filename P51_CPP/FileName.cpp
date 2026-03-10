@@ -6,6 +6,8 @@
 
 #include"myFunc.h"
 
+#include"Struct.h"
+
 using namespace std;
 
 
@@ -15,21 +17,93 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+	// 10.03.2026
+
+	//Point p1;
+	//p1.x = 10;
+	//p1.y = 5;
+	//p1.name = 'A';
+
+	//Point p2 = { 'B', 3, 5 };
+
+	//printPoint(p1);
+	//printPoint(p2);
+
+
+	//Point p3[] = { {'C', 5,4}, {'D', 6, 7}, {'E', 2, 8} };
+	//for (size_t i = 0; i < 3; i++)
+	//{
+	//	printPoint(p3[i]);
+	//}
+
+
+	//const int size = 5;
+	//Point p[size];
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	p[i].x = rand() % 10;
+	//	p[i].y = rand() % 10;
+	//	p[i].name = 'A' + i;
+
+	//	printPoint(p[i]);
+	//}
+
+	//float lMax = 0;
+	//int i1, i2;
+	//for (size_t i = 0; i < size - 1; i++)
+	//{
+	//	for (size_t j = i + 1; j < size; j++)
+	//	{
+	//		float l = getLength(p[i], p[j]);
+	//		if (l > lMax)
+	//		{
+	//			lMax = l;
+	//			i1 = i;
+	//			i2 = j;
+	//		}
+	//	}
+	//}
+
+	//printPoint(p[i1]);
+	//printPoint(p[i2]);
+	//cout << lMax << endl;
+
+
+	//Point* p1 = new Point;
+	//p1->x = 10;
+
+	//printPoint(*p1);
+
+
+	Date d{ 10,3,2026 };
+	printDate(d);
+
+	Student s;
+	inputStudent(s);
+	addMarkStudent(s);
+	addMarkStudent(s);
+	addMarkStudent(s);
+	printStudent(s);
+
+
+	Drob d1{ 1,2 };
+	Drob d2{ 1,4 };
+	Drob d3 = add(d1, d2);
 
 	// 05.03.2026
 		
-	char* s1 = getString();
-	char* s2 = getString();
+	//char* s1 = getString();
+	//char* s2 = getString();
 
-	char* s3 = mystrcpy(s1, s2);
+	//char* s3 = mystrcpy(s1, s2);
 
-	cout << s1 << endl;
-	cout << s2 << endl;
-	cout << s3 << endl;
+	//cout << s1 << endl;
+	//cout << s2 << endl;
+	//cout << s3 << endl;
 
-	delete s1;
-	delete s2;
-	delete s3;
+	//delete s1;
+	//delete s2;
+	//delete s3;
 
 
 	//int size = 5;

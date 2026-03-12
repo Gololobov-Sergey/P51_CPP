@@ -118,8 +118,9 @@ struct Group
 
 	void menu()
 	{
-		cout << "Enter group name : ";
-		name = getString();
+		//cout << "Enter group name : ";
+		//name = getString();
+		name = new char[] {"P51"};
 
 		while (true)
 		{

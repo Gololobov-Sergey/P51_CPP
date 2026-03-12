@@ -20,6 +20,16 @@ int main()
 
 
 	Group group;
+
+	//=====================================
+	group.size = 2;
+	group.students = new Student[2];
+	Student s1{ new char[] {"Vasya"}, new char[] {"Pupkin"},  new int[3] {12, 10, 8}, 3 };
+	Student s2{ new char[] {"Oleg"}, new char[] {"Nikitin"},  new int[4] {11, 9, 8, 10}, 4 };
+	group.students[0] = s1;
+	group.students[1] = s2;
+	//=====================================
+
 	group.menu();
 
 

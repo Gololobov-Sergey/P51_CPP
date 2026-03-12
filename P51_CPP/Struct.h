@@ -5,12 +5,14 @@ struct Point
 	char name;
 	int x;
 	int y;
+
+	void print()
+	{
+		cout << name << "(" << x << ", " << y << ")" << endl;
+	}
 };
 
-void printPoint(Point p)
-{
-	cout << p.name << "(" << p.x << ", " << p.y << ")" << endl;
-}
+
 
 double getLength(Point p1, Point p2)
 {
@@ -21,48 +23,53 @@ double getLength(Point p1, Point p2)
 struct Date
 {
 	int day, month, year;
+
+
+	void print()
+	{
+		if (day < 10)
+			cout << "0";
+		cout << day << ".";
+		if (month < 10)
+			cout << "0";
+		cout << month << "." << year << endl;
+	}
 };
 
-void printDate(Date p)
+
+
+
+
+
+struct Engine
 {
-	if (p.day < 10)
-		cout << "0";
-	cout << p.day << ".";
-	if (p.month < 10)
-		cout << "0";
-	cout << p.month << "." << p.year << endl;
-}
+	int cilindr = 4;
 
+	void start()
+	{
+		cout << "Engine started" << endl;
+	}
 
-struct Student
-{
-	char* name;
-	Date birthDay;
-
-	int* marks = nullptr;
-	size_t size = 0;
+	void stop()
+	{
+		cout << "Engine stoped" << endl;
+	}
 };
 
-void inputStudent(Student& s)
-{
-	cout << "Enter name: ";
-	s.name = getString();
-	cout << "Enter BD (dd mm year) : ";
-	cin >> s.birthDay.day >> s.birthDay.month >> s.birthDay.year;
 
-}
-
-void printStudent(Student s)
+struct Car
 {
-	cout << "Name : " << s.name << endl;
-	cout << "BD   : "; printDate(s.birthDay);
-	cout << "Marks: "; printArray(s.marks, s.size);
-}
+	Engine engine;
 
-void addMarkStudent(Student& s)
-{
-	cout << "Mark : ";
-	int m;
-	cin >> m;
-	append(s.marks, s.size, m);
-}
+	void move(int l)
+	{
+		engine.start();
+		cout << "Car move " << l << "m" << endl;
+		engine.stop();
+	}
+
+	void beep()
+	{
+		cout << "Bepppp Beeeeep" << endl;
+	}
+};

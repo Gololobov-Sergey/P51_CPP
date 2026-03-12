@@ -7,6 +7,7 @@
 #include"myFunc.h"
 
 #include"Struct.h"
+#include"Students.h"
 
 using namespace std;
 
@@ -16,6 +17,21 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+
+
+	Group group;
+	group.menu();
+
+
+	//Point p1;
+	//p1.print();
+
+
+	//Car car;
+	//car.move(150);
+	//car.beep();
+
+
 
 	// 10.03.2026
 
@@ -75,20 +91,20 @@ int main()
 	//printPoint(*p1);
 
 
-	Date d{ 10,3,2026 };
-	printDate(d);
+	//Date d{ 10,3,2026 };
+	//printDate(d);
 
-	Student s;
-	inputStudent(s);
-	addMarkStudent(s);
-	addMarkStudent(s);
-	addMarkStudent(s);
-	printStudent(s);
+	//Student s;
+	//inputStudent(s);
+	//addMarkStudent(s);
+	//addMarkStudent(s);
+	//addMarkStudent(s);
+	//printStudent(s);
 
 
-	Drob d1{ 1,2 };
-	Drob d2{ 1,4 };
-	Drob d3 = add(d1, d2);
+	//Drob d1{ 1,2 };
+	//Drob d2{ 1,4 };
+	//Drob d3 = add(d1, d2);
 
 	// 05.03.2026
 		

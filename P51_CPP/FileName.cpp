@@ -4,6 +4,8 @@
 #include<Windows.h>
 #include<iomanip>
 
+#include<fstream>
+
 #include"myFunc.h"
 
 #include"Struct.h"
@@ -18,19 +20,134 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+	// 17.03.2026
 
-	Group group;
 
-	//=====================================
-	group.size = 2;
-	group.students = new Student[2];
-	Student s1{ new char[] {"Vasya"}, new char[] {"Pupkin"},  new int[3] {12, 10, 8}, 3 };
-	Student s2{ new char[] {"Oleg"}, new char[] {"Nikitin"},  new int[4] {11, 9, 8, 10}, 4 };
-	group.students[0] = s1;
-	group.students[1] = s2;
-	//=====================================
+	//ofstream fout("test.txt");
+	//fout << "Hello C++" << endl;
+	//fout.close();
 
-	group.menu();
+
+	//int a[] = { 1,2,3,4,5 };
+	//ofstream fout("test1.txt");
+	//for (size_t i = 0; i < 5; i++)
+	//{
+	//	fout << a[i] << " ";
+	//}
+	//fout.close();
+
+
+	//int b[5];
+	//ifstream fin("test11.txt");
+	//if (fin.is_open())
+	//{
+	//	for (size_t i = 0; i < 5; i++)
+	//	{
+	//		fin >> b[i];
+	//	}
+	//}
+	//else
+	//{
+	//	cout << "File not found!" << endl;
+	//}
+	//fin.close();
+	//printArray(b, 5);
+
+
+	//size_t size = 0;
+	//int* b = nullptr;
+	//ifstream fin("test1.txt");
+	//if (fin.is_open())
+	//{
+	//	int a;
+	//	while(fin >> a)
+	//	{
+	//		append(b, size, a);
+	//	}
+	//}
+	//else
+	//{
+	//	cout << "File not found!" << endl;
+	//}
+	//fin.close();
+	//printArray(b, size);
+
+
+	//ifstream fin("test1.txt");
+	//if (fin.is_open())
+	//{
+	//	ofstream fout("test2.txt");
+	//	int a;
+	//	while(fin >> a)
+	//	{
+	//		if (a % 2 == 0)
+	//		{
+	//			fout << a << " ";
+	//		}
+	//	}
+	//}
+
+
+
+	//const int size = 5;
+	//Point p[size];
+	//ofstream fout("points.txt");
+	//fout << size << endl;
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	p[i].x = rand() % 10;
+	//	p[i].y = rand() % 10;
+	//	p[i].name = 'A' + i;
+
+	//	p[i].print();
+
+	//	fout << p[i].name << " " << p[i].x << " " << p[i].y << endl;
+	//}
+
+
+	//size_t size;
+	//ifstream fin("points.txt");
+	//fin >> size;
+	//Point* p = new Point[size];
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	fin >> p[i].name >> p[i].x >> p[i].y;
+	//	p[i].print();
+	//}
+
+
+	//ifstream fin("test3.txt");
+	//while (!fin.eof())
+	//{
+	//	char buffer[255];
+	//	fin.getline(buffer, 255);
+	//	cout << buffer << endl;
+	//}
+
+
+	//Student s1{ new char[] {"Vasya"}, new char[] {"Pupkin"},  new int[3] {12, 10, 8}, 3 };
+	//ofstream out("student.txt");
+	//s1.save(out);
+
+
+	//ifstream in("student.txt");
+	//Student s2;
+	//s2.load(in);
+	//s2.print();
+
+
+	//Group group;
+
+	////=====================================
+	//group.size = 2;
+	//group.students = new Student[2];
+	//Student s1{ new char[] {"Vasya"}, new char[] {"Pupkin"},  new int[3] {12, 10, 8}, 3 };
+	//Student s2{ new char[] {"Oleg"}, new char[] {"Nikitin"},  new int[4] {11, 9, 8, 10}, 4 };
+	//group.students[0] = s1;
+	//group.students[1] = s2;
+	////=====================================
+
+	//group.menu();
 
 
 	//Point p1;

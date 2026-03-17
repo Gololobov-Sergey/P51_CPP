@@ -15,6 +15,41 @@ struct Student
 	int* marks = nullptr;
 	size_t size = 0;
 
+	void save(ofstream& out)
+	{
+		out << size << endl;
+		out << surname << endl;
+		out << name << endl;
+		
+		for (size_t i = 0; i < size; i++)
+		{
+			out << marks[i] << " ";
+		}
+		out << endl;
+	}
+
+	void load(ifstream& in)
+	{
+		in >> size;
+		in.ignore();
+		char buff[255];
+		in.getline(buff, 255);
+		int len = strlen(buff);
+		name = new char[len+1];
+		strcpy(name, buff);
+
+		in.getline(buff, 255);
+		len = strlen(buff);
+		surname = new char[len + 1];
+		strcpy(surname, buff);
+		
+		marks = new int[size];
+		for (size_t i = 0; i < size; i++)
+		{
+			in >> marks[i];
+		}
+	}
+
 	void input()
 	{
 		cout << "Enter surname: ";
@@ -118,9 +153,10 @@ struct Group
 
 	void menu()
 	{
+		load();
 		//cout << "Enter group name : ";
 		//name = getString();
-		name = new char[] {"P51"};
+		//name = new char[] {"P51"};
 
 		while (true)
 		{
@@ -145,10 +181,21 @@ struct Group
 				workWithStudent();
 				break;
 			case 5:
+				save();
 				exit(0);
 			default:
 				break;
 			}
 		}
+	}
+
+	void save()
+	{
+
+	}
+
+	void load()
+	{
+
 	}
 };

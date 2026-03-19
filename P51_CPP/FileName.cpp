@@ -10,6 +10,7 @@
 
 #include"Struct.h"
 #include"Students.h"
+#include"Monobank.h"
 
 using namespace std;
 
@@ -19,6 +20,15 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+
+
+	//19.03.2026
+
+
+	Bank bank;
+	bank.init("Monobank");
+	bank.menu();
+
 
 	// 17.03.2026
 

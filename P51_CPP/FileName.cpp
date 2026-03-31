@@ -14,6 +14,18 @@
 
 using namespace std;
 
+#define SIZE 5
+#define ЦИКЛ(a) for(int i = 0; i < a; i++)
+#define ДРУК cout
+
+#define SQR(a) (a)*(a)
+
+#define TEST 
+
+struct МАШИНА
+{
+
+};
 
 
 int main()
@@ -21,13 +33,53 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+	// & | ^ >> << ~
+
+
+	Menu::SetColor(12, 0);
+	cout << (~3) << endl;
+
+	cout << sizeof(Date) << endl;
+
+
+	//МАШИНА машина;
+
+
+//#if ...
+//#ifdef DEBUG
+//#ifndef DEBUG
+
+//#else
+//#elif ...
+
+//#endif // DEBUG
+
+	
+
+//#ifdef TEST
+//	int a[10];
+//#else
+//	int* a = new int[10];
+//#endif
+//
+//	setArray(a, 10);
+//	printArray(a, 10);
+
+
+	//int a[SIZE];
+	//ЦИКЛ(5)
+	//{
+	//	ДРУК << "mama" << endl;
+	//}
+
+	//ДРУК << SQR('w') << endl;
 
 	//19.03.2026
 
 
-	Bank bank;
-	bank.init("Monobank");
-	bank.menu();
+	//Bank bank;
+	//bank.init("Monobank");
+	//bank.menu();
 
 
 	// 17.03.2026

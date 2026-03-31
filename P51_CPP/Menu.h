@@ -17,6 +17,9 @@ enum HorizontalAlignment
 
 class Menu
 {
+	
+public:
+
 	enum Color
 	{
 		Black = 0, Blue = 1, Green = 2, Cyan = 3, Red = 4, Magenta = 5, Brown = 6, LightGray = 7, DarkGray = 8,
@@ -36,7 +39,6 @@ class Menu
 		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 	}
 
-public:
 	static int select_vertical(vector <string> menu, HorizontalAlignment ha, int y = 12)
 	{
 		HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);

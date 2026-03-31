@@ -23,7 +23,7 @@ bool isEven(int a)
 	return a % 2 == 0;
 }
 
-float avg(int a, int b, int c)
+inline float avg(int a, int b, int c)
 {
 	return (a + b + c) / 3.f;
 }

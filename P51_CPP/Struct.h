@@ -2,9 +2,10 @@
 
 struct Point
 {
-	char name;
-	int x;
+	
+	double x;
 	int y;
+	char name;
 
 	void print()
 	{
@@ -12,6 +13,11 @@ struct Point
 	}
 };
 
+
+struct GGG
+{
+
+};
 
 
 double getLength(Point p1, Point p2)
@@ -22,7 +28,9 @@ double getLength(Point p1, Point p2)
 
 struct Date
 {
-	int day, month, year;
+	int day : 5;
+	int month : 4; 
+	int year : 12;
 
 
 	void print()
